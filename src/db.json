@@ -1,0 +1,177 @@
+{
+	"users": [
+		{
+			"id": "001",
+			"login": "klaid",
+			"password": "rexa123",
+			"registed_at": "2023-12-24",
+			"role_id": 0
+		}
+	],
+	"roles": [
+		{
+			"id": 0,
+			"name": "Администратор"
+		},
+		{
+			"id": 1,
+			"name": "Посетитель"
+		},
+		{
+			"id": 2,
+			"name": "Гость"
+		}
+	],
+	"pizzas": [
+		{
+			"id": "001",
+			"title": "Пицца Cesar",
+			"image_url": "src/assets/Pizza/pizza-caesar.png",
+			"content": "куриное мясо, сметанный соус, бекон, моцарелла, салат, соус цезарь, пармезан",
+			"price": {
+				"32sm": 23,
+				"23sm": 16
+			}
+		},
+		{
+			"id": "002",
+			"title": "Пицца Napoli",
+			"image_url": "src/assets/Pizza/pizza-napoli.png",
+			"content": "томатный соус, мацарелла, оливки, анчоусы, красный свежий лук, базилик",
+			"price": {
+				"32sm": 23,
+				"23sm": 16
+			}
+		},
+		{
+			"id": "003",
+			"title": "Пицца Gorgo Pere",
+			"image_url": "src/assets/Pizza/pizza-gorgo-pere.png",
+			"content": "медовое маскарпоне, груша нарезанная кусочками, моцарелла, сыр горгонзола",
+			"price": {
+				"32sm": 21,
+				"23sm": 15
+			}
+		},
+		{
+			"id": "004",
+			"title": "Пицца Don Giovanni",
+			"image_url": "src/assets/Pizza/pizza-don-giovanni.png",
+			"content": "томатный соус, моцарелла, прошутто, сушенные помидоры, пармезан, рукола",
+			"price": {
+				"32sm": 25,
+				"23sm": 17
+			}
+		},
+		{
+			"id": "005",
+			"title": "Пицца Carbonara",
+			"image_url": "src/assets/Pizza/pizza-carbonara.png",
+			"content": "соус карбонара, бекон, моцарелла, свежий лук, пармезан",
+			"price": {
+				"32sm": 24,
+				"23sm": 16
+			}
+		},
+		{
+			"id": "006",
+			"title": "Пицца Vegetariana",
+			"image_url": "src/assets/Pizza/pizza-vegetariana.png",
+			"content": "сметанный соус, моцарелла, копченая скаморза, горгонзола, шампиньоны, шпенат, помидоры черри, чесночный соус",
+			"price": {
+				"32sm": 23,
+				"23sm": 16
+			}
+		},
+		{
+			"id": "007",
+			"title": "Пицца Salami",
+			"image_url": "src/assets/Pizza/pizza-salami.png",
+			"content": "томатный соус, моцарелла, пикантное салями Napoli",
+			"price": {
+				"32sm": 21,
+				"23sm": 15
+			}
+		},
+		{
+			"id": "008",
+			"title": "Пицца Quattro Formaggi",
+			"image_url": "src/assets/Pizza/pizza-quattro-formaggi.png",
+			"content": "Сметанный соус, моцарелла, копченый сыр, пармезан, горгонзола, рукола",
+			"price": {
+				"32sm": 24,
+				"23sm": 16
+			}
+		},
+		{
+			"id": "009",
+			"title": "Пицца Cotto",
+			"image_url": "src/assets/Pizza/pizza-cotto.png",
+			"content": "томатный соус, моцарелла, мацарелла fior di latte, ветчина",
+			"price": {
+				"32sm": 22,
+				"23sm": 15
+			}
+		},
+		{
+			"id": "010",
+			"title": "Пицца Greca Vegan",
+			"image_url": "src/assets/Pizza/pizza-greca-vegan.png",
+			"content": "томатный соус, копченый темпех, запеченая паприка, запеченый баклажан, красный свежий лук, оливковое масло с травами, греческий сыр",
+			"price": {
+				"32sm": 23,
+				"23sm": 16
+			}
+		},
+		{
+			"id": "011",
+			"title": "Пицца Margherita",
+			"image_url": "src/assets/Pizza/pizza-margherita.png",
+			"content": "томатный соус, моцарелла, оливковое масло, базилик",
+			"price": {
+				"32sm": 19,
+				"23sm": 13
+			}
+		},
+		{
+			"id": "012",
+			"title": "Пицца Tonno",
+			"image_url": "src/assets/Pizza/pizza-tonno.png",
+			"content": "томатный соус, моцарелла, тунец, красный свежий лук, петрушка",
+			"price": {
+				"32sm": 22,
+				"23sm": 15
+			}
+		},
+		{
+			"id": "013",
+			"title": "Пицца Diavola",
+			"image_url": "src/assets/Pizza/pizza-diavola.png",
+			"content": "томатный соус, пикантное салями Napoli, моцарелла, запеченая паприка, сметанный Gervais, чили паприка",
+			"price": {
+				"32sm": 23,
+				"23sm": 16
+			}
+		},
+		{
+			"id": "014",
+			"title": "Пицца Capricciosa",
+			"image_url": "src/assets/Pizza/pizza-capricciosa.png",
+			"content": "томатный соус, моцарелла, ветчина, шампиньоны, оливки, оливковое масло",
+			"price": {
+				"32sm": 19,
+				"23sm": 14
+			}
+		},
+		{
+			"id": "015",
+			"title": "Пицца Angeli Demoni",
+			"image_url": "src/assets/Pizza/pizza-angeli-demoni.png",
+			"content": "томатный соус, моцарелла, мацарелла fior di latte, пикантное салями Napoli, копченый сыр Scamorza, базилик, баклажан",
+			"price": {
+				"32sm": 24,
+				"23sm": 16
+			}
+		}
+	]
+}
