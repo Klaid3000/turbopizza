@@ -1,32 +1,30 @@
 import { Routes, Route } from 'react-router-dom';
-import { Header } from './components';
+import { Header, Footer } from './components';
 import styled from 'styled-components';
 
 const AppColum = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	width: 1380px;
+	width: 1400px;
 	min-height: 100%;
 	margin: 0 auto;
 	background-color: #ddd;
 `;
 
 const Content = styled.div`
-	padding: 200px 0;
+	padding: 150px 0;
 `;
 
 const H2 = styled.h2`
 	text-align: center;
 `;
 
-const Footer = () => <div>Футер</div>;
-
 export const Pizza = () => {
 	return (
 		<>
+			<Header />
 			<AppColum>
-				<Header />
 				<Content>
 					<H2>Контент страницы</H2>
 					<Routes>
@@ -52,8 +50,8 @@ export const Pizza = () => {
 						<Route path="*" element={<div>Ошибка</div>} />
 					</Routes>
 				</Content>
-				<Footer />
 			</AppColum>
+			<Footer />
 		</>
 	);
 };

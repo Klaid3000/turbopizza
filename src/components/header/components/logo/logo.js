@@ -10,9 +10,9 @@ const LogoContainer = ({ className }) => (
 export const Logo = styled(LogoContainer)`
 	a {
 		display: inline-block;
-		width: 300px;
-		height: 300px;
-		margin: -68px 0 0 40px;
+		width: ${({ width }) => width};
+		height: ${({ height }) => height};
+		margin: ${({ margin }) => margin};
 		background-image: url(${require('../../../../assets/Logo/Logo.png')});
 		background-size: cover;
 	}

@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
-const IconContainer = ({ className, id }) => <div className={className}></div>;
+const IconContainer = ({ className, onClick }) => (
+	<div className={className} onClick={onClick}></div>
+);
 
 export const Icon = styled(IconContainer)`
 	display: inline-block;
@@ -12,4 +14,5 @@ export const Icon = styled(IconContainer)`
 	filter: ${({ filter }) => filter};
 	border: ${({ border }) => border};
 	border-radius: ${({ radius }) => radius};
+	cursor: ${({ cursor }) => cursor};
 `;
