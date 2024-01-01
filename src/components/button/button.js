@@ -18,11 +18,9 @@ export const Button = styled(ButtonContainer)`
 	border: 1px solid #000;
 	border-radius: 20px;
 	background-color: #efa57c;
-	// background-color: #ff7021;
 
 	&:hover {
 		cursor: pointer;
-		// background-color: #efa57c;
 		background-color: #ff7021;
 	}
 `;

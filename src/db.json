@@ -1,441 +1,435 @@
 {
-	"users": [
-		{
-			"id": "001",
-			"login": "klaid",
-			"password": "rexa123",
-			"registed_at": "2023-12-24",
-			"role_id": 0
-		},
-		{
-			"login": "123456",
-			"password": "123456",
-			"role_id": 1,
-			"id": "j5rdJkR"
-		}
-	],
-	"roles": [
-		{
-			"id": 0,
-			"name": "Администратор"
-		},
-		{
-			"id": 1,
-			"name": "Посетитель"
-		},
-		{
-			"id": 2,
-			"name": "Гость"
-		}
-	],
-	"pizzas": [
-		{
-			"id": "001",
-			"title": "Пицца Cesar",
-			"image_url": "src/assets/Pizza/pizza-caesar.png",
-			"content": "куриное мясо, сметанный соус, бекон, моцарелла, салат, соус цезарь, пармезан",
-			"price": {
-				"32sm": 23,
-				"23sm": 16
-			}
-		},
-		{
-			"id": "002",
-			"title": "Пицца Napoli",
-			"image_url": "src/assets/Pizza/pizza-napoli.png",
-			"content": "томатный соус, мацарелла, оливки, анчоусы, красный свежий лук, базилик",
-			"price": {
-				"32sm": 23,
-				"23sm": 16
-			}
-		},
-		{
-			"id": "003",
-			"title": "Пицца Gorgo Pere",
-			"image_url": "src/assets/Pizza/pizza-gorgo-pere.png",
-			"content": "медовое маскарпоне, груша нарезанная кусочками, моцарелла, сыр горгонзола",
-			"price": {
-				"32sm": 21,
-				"23sm": 15
-			}
-		},
-		{
-			"id": "004",
-			"title": "Пицца Don Giovanni",
-			"image_url": "src/assets/Pizza/pizza-don-giovanni.png",
-			"content": "томатный соус, моцарелла, прошутто, сушенные помидоры, пармезан, рукола",
-			"price": {
-				"32sm": 25,
-				"23sm": 17
-			}
-		},
-		{
-			"id": "005",
-			"title": "Пицца Carbonara",
-			"image_url": "src/assets/Pizza/pizza-carbonara.png",
-			"content": "соус карбонара, бекон, моцарелла, свежий лук, пармезан",
-			"price": {
-				"32sm": 24,
-				"23sm": 16
-			}
-		},
-		{
-			"id": "006",
-			"title": "Пицца Vegetariana",
-			"image_url": "src/assets/Pizza/pizza-vegetariana.png",
-			"content": "сметанный соус, моцарелла, копченая скаморза, горгонзола, шампиньоны, шпенат, помидоры черри, чесночный соус",
-			"price": {
-				"32sm": 23,
-				"23sm": 16
-			}
-		},
-		{
-			"id": "007",
-			"title": "Пицца Salami",
-			"image_url": "src/assets/Pizza/pizza-salami.png",
-			"content": "томатный соус, моцарелла, пикантное салями Napoli",
-			"price": {
-				"32sm": 21,
-				"23sm": 15
-			}
-		},
-		{
-			"id": "008",
-			"title": "Пицца Quattro Formaggi",
-			"image_url": "src/assets/Pizza/pizza-quattro-formaggi.png",
-			"content": "Сметанный соус, моцарелла, копченый сыр, пармезан, горгонзола, рукола",
-			"price": {
-				"32sm": 24,
-				"23sm": 16
-			}
-		},
-		{
-			"id": "009",
-			"title": "Пицца Cotto",
-			"image_url": "src/assets/Pizza/pizza-cotto.png",
-			"content": "томатный соус, моцарелла, мацарелла fior di latte, ветчина",
-			"price": {
-				"32sm": 22,
-				"23sm": 15
-			}
-		},
-		{
-			"id": "010",
-			"title": "Пицца Greca Vegan",
-			"image_url": "src/assets/Pizza/pizza-greca-vegan.png",
-			"content": "томатный соус, копченый темпех, запеченая паприка, запеченый баклажан, красный свежий лук, оливковое масло с травами, греческий сыр",
-			"price": {
-				"32sm": 23,
-				"23sm": 16
-			}
-		},
-		{
-			"id": "011",
-			"title": "Пицца Margherita",
-			"image_url": "src/assets/Pizza/pizza-margherita.png",
-			"content": "томатный соус, моцарелла, оливковое масло, базилик",
-			"price": {
-				"32sm": 19,
-				"23sm": 13
-			}
-		},
-		{
-			"id": "012",
-			"title": "Пицца Tonno",
-			"image_url": "src/assets/Pizza/pizza-tonno.png",
-			"content": "томатный соус, моцарелла, тунец, красный свежий лук, петрушка",
-			"price": {
-				"32sm": 22,
-				"23sm": 15
-			}
-		},
-		{
-			"id": "013",
-			"title": "Пицца Diavola",
-			"image_url": "src/assets/Pizza/pizza-diavola.png",
-			"content": "томатный соус, пикантное салями Napoli, моцарелла, запеченая паприка, сметанный Gervais, чили паприка",
-			"price": {
-				"32sm": 23,
-				"23sm": 16
-			}
-		},
-		{
-			"id": "014",
-			"title": "Пицца Capricciosa",
-			"image_url": "src/assets/Pizza/pizza-capricciosa.png",
-			"content": "томатный соус, моцарелла, ветчина, шампиньоны, оливки, оливковое масло",
-			"price": {
-				"32sm": 19,
-				"23sm": 14
-			}
-		},
-		{
-			"id": "015",
-			"title": "Пицца Angeli Demoni",
-			"image_url": "src/assets/Pizza/pizza-angeli-demoni.png",
-			"content": "томатный соус, моцарелла, мацарелла fior di latte, пикантное салями Napoli, копченый сыр Scamorza, базилик, баклажан",
-			"price": {
-				"32sm": 24,
-				"23sm": 16
-			}
-		}
-	],
-	"drinks": [
-		{
-			"id": "016",
-			"title": "Апельсиновый сок 0,2",
-			"image_url": "src/assets/Drink/apelsinovy-sok-0,2.png",
-			"content": "Апельсиновый сок",
-			"price": 6
-		},
-		{
-			"id": "017",
-			"title": "Mirinda 0,33",
-			"image_url": "src/assets/Drink/mirinda-0,33.png",
-			"content": "Mirinda",
-			"price": 5
-		},
-		{
-			"id": "018",
-			"title": "Pepsi 0,33",
-			"image_url": "src/assets/Drink/pepsi-0,33.png",
-			"content": "Pepsi",
-			"price": 5
-		},
-		{
-			"id": "019",
-			"title": "Pepsi light 0,33",
-			"image_url": "src/assets/Drink/pepsi-light-0,33.png",
-			"content": "Pepsi light",
-			"price": 5
-		},
-		{
-			"id": "020",
-			"title": "Pilsner Urquell 0,33",
-			"image_url": "src/assets/Drink/pilsner-urquell-0,33.png",
-			"content": "Пиво Pilsner Urquell",
-			"price": 6
-		},
-		{
-			"id": "021",
-			"title": "Vinea 0,25",
-			"image_url": "src/assets/Drink/vinea-0,25.png",
-			"content": "Vinea",
-			"price": 5
-		},
-		{
-			"id": "022",
-			"title": "Негазированная вода 0,5",
-			"image_url": "src/assets/Drink/voda-besgaz-0,5.png",
-			"content": "Негазированная вода SanBenedetto",
-			"price": 5
-		},
-		{
-			"id": "023",
-			"title": "Газированная вода 0,5",
-			"image_url": "src/assets/Drink/voda-gaz-0,5.png",
-			"content": "Газированная вода SanBenedetto",
-			"price": 5
-		}
-	],
-	"gifts": [
-		{
-			"id": "024",
-			"title": "Подарочная карта на 30",
-			"image_url": "src/assets/Gift/gift.png",
-			"content": "Подарочная карта на 30",
-			"price": 30
-		},
-		{
-			"id": "025",
-			"title": "Подарочная карта на 50",
-			"image_url": "src/assets/Gift/gift.png",
-			"content": "Подарочная карта на 50",
-			"price": 50
-		},
-		{
-			"id": "026",
-			"title": "Подарочная карта на 100",
-			"image_url": "src/assets/Gift/gift.png",
-			"content": "Подарочная карта на 100",
-			"price": 100
-		}
-	],
-	"ingredients": [
-		{
-			"id": "027",
-			"title": "Анчоусы",
-			"image_url": "src/assets/Ingredience/Maso/anchousy.png"
-		},
-		{
-			"id": "028",
-			"title": "Бекон",
-			"image_url": "src/assets/Ingredience/Maso/becon.png"
-		},
-		{
-			"id": "029",
-			"title": "Курица",
-			"image_url": "src/assets/Ingredience/Maso/kurinoe-maso.png"
-		},
-		{
-			"id": "030",
-			"title": "Прошутто",
-			"image_url": "src/assets/Ingredience/Maso/prosciutto.png"
-		},
-		{
-			"id": "031",
-			"title": "Салями",
-			"image_url": "src/assets/Ingredience/Maso/salam-peperoni.png"
-		},
-		{
-			"id": "032",
-			"title": "Тунец",
-			"image_url": "src/assets/Ingredience/Maso/tunec.png"
-		},
-		{
-			"id": "033",
-			"title": "Ветчина",
-			"image_url": "src/assets/Ingredience/Maso/vetchina.png"
-		},
-		{
-			"id": "034",
-			"title": "Ананас",
-			"image_url": "src/assets/Ingredience/Ovoschi/ananas.png"
-		},
-		{
-			"id": "035",
-			"title": "Кабачок",
-			"image_url": "src/assets/Ingredience/Ovoschi/kabachok-grilovany.png"
-		},
-		{
-			"id": "036",
-			"title": "Кукуруза",
-			"image_url": "src/assets/Ingredience/Ovoschi/kukuruza.png"
-		},
-		{
-			"id": "037",
-			"title": "Лук",
-			"image_url": "src/assetsIngredience//Ovoschi/luk.png"
-		},
-		{
-			"id": "038",
-			"title": "Оливки",
-			"image_url": "src/assets/Ingredience/Ovoschi/olivky.png"
-		},
-		{
-			"id": "039",
-			"title": "Паприка с гриля",
-			"image_url": "src/assets/Ingredience/Ovoschi/paprika-grilovanaja.png"
-		},
-		{
-			"id": "040",
-			"title": "Паприка чили",
-			"image_url": "src/assets/Ingredience/Ovoschi/paprika-chili.png"
-		},
-		{
-			"id": "041",
-			"title": "Помидоры свежие",
-			"image_url": "src/assets/Ingredience/Ovoschi/pomidory-svezie.png"
-		},
-		{
-			"id": "042",
-			"title": "Помидоры запеченые",
-			"image_url": "src/assets/Ingredience/Ovoschi/pomidory-zapecheny.png"
-		},
-		{
-			"id": "043",
-			"title": "Шампиньоны",
-			"image_url": "src/assets/Ingredience/Ovoschi/schampiony.png"
-		},
-		{
-			"id": "044",
-			"title": "Шпенат",
-			"image_url": "src/assets/Ingredience/Ovoschi/spenat.png"
-		},
-		{
-			"id": "045",
-			"title": "Соус Carbonara",
-			"image_url": "src/assets/Ingredience/Sosy/carbonara-smetanovy-sos.png"
-		},
-		{
-			"id": "046",
-			"title": "Соус Сметанный",
-			"image_url": "src/assets/Ingredience/Sosy/carbonara-smetanovy-sos.png"
-		},
-		{
-			"id": "047",
-			"title": "Чесночное масло",
-			"image_url": "src/assets/Ingredience/Sosy/chesnochnoe-maslo-sos.png"
-		},
-		{
-			"id": "048",
-			"title": "Томатная паста",
-			"image_url": "src/assets/Ingredience/Sosy/tomatovy-sos.png"
-		},
-		{
-			"id": "049",
-			"title": "Бальзамический соус",
-			"image_url": "src/assets/Ingredience/Specii/balsamichesky-sos-doponitelno.png"
-		},
-		{
-			"id": "050",
-			"title": "Оливковое масло",
-			"image_url": "src/assets/Ingredience/Specii/olivkovy-sos-doponitelno.png"
-		},
-		{
-			"id": "051",
-			"title": "Соус Песто",
-			"image_url": "src/assets/Ingredience/Specii/pesto-sos-doponitelno.png"
-		},
-		{
-			"id": "052",
-			"title": "Базилик",
-			"image_url": "src/assets/Ingredience/Specii/bazilik.png"
-		},
-		{
-			"id": "053",
-			"title": "Петрушка",
-			"image_url": "src/assets/Ingredience/Specii/petruschka.png"
-		},
-		{
-			"id": "054",
-			"title": "Рукола",
-			"image_url": "src/assets/Ingredience/Specii/rucola.png"
-		},
-		{
-			"id": "055",
-			"title": "Сыр горгонзола",
-			"image_url": "src/assets/Ingredience/Syr/gorgonzola.png"
-		},
-		{
-			"id": "056",
-			"title": "Греческий сыр",
-			"image_url": "src/assets/Ingredience/Syr/grechesky-syr.png"
-		},
-		{
-			"id": "057",
-			"title": "Сыр Моцарелла",
-			"image_url": "src/assets/Ingredience/Syr/mocarella.png"
-		},
-		{
-			"id": "058",
-			"title": "Сыр пармезан",
-			"image_url": "src/assets/Ingredience/Syr/parmezan.png"
-		},
-		{
-			"id": "059",
-			"title": "Сыр Скаморза",
-			"image_url": "src/assets/Ingredience/Syr/scamorza-kopcheny.png"
-		},
-		{
-			"id": "060",
-			"title": "Традиционное тесто",
-			"image_url": "src/assets/Ingredience/Testo/gift.png"
-		},
-		{
-			"id": "061",
-			"title": "Цельнозерновое тесто",
-			"image_url": "src/assets/Ingredience/Testo/gift.png"
-		}
-	]
+  "users": [
+    {
+      "login": "klaid",
+      "password": "123456",
+      "registed_at": "2024-01-01 19:55",
+      "role_id": 0,
+      "id": 2
+    }
+  ],
+  "roles": [
+    {
+      "id": 0,
+      "name": "Администратор"
+    },
+    {
+      "id": 1,
+      "name": "Посетитель"
+    },
+    {
+      "id": 2,
+      "name": "Гость"
+    }
+  ],
+  "pizzas": [
+    {
+      "id": "001",
+      "title": "Пицца Cesar",
+      "image_url": "src/assets/Pizza/pizza-caesar.png",
+      "content": "куриное мясо, сметанный соус, бекон, моцарелла, салат, соус цезарь, пармезан",
+      "price": {
+        "32sm": 23,
+        "23sm": 16
+      }
+    },
+    {
+      "id": "002",
+      "title": "Пицца Napoli",
+      "image_url": "src/assets/Pizza/pizza-napoli.png",
+      "content": "томатный соус, мацарелла, оливки, анчоусы, красный свежий лук, базилик",
+      "price": {
+        "32sm": 23,
+        "23sm": 16
+      }
+    },
+    {
+      "id": "003",
+      "title": "Пицца Gorgo Pere",
+      "image_url": "src/assets/Pizza/pizza-gorgo-pere.png",
+      "content": "медовое маскарпоне, груша нарезанная кусочками, моцарелла, сыр горгонзола",
+      "price": {
+        "32sm": 21,
+        "23sm": 15
+      }
+    },
+    {
+      "id": "004",
+      "title": "Пицца Don Giovanni",
+      "image_url": "src/assets/Pizza/pizza-don-giovanni.png",
+      "content": "томатный соус, моцарелла, прошутто, сушенные помидоры, пармезан, рукола",
+      "price": {
+        "32sm": 25,
+        "23sm": 17
+      }
+    },
+    {
+      "id": "005",
+      "title": "Пицца Carbonara",
+      "image_url": "src/assets/Pizza/pizza-carbonara.png",
+      "content": "соус карбонара, бекон, моцарелла, свежий лук, пармезан",
+      "price": {
+        "32sm": 24,
+        "23sm": 16
+      }
+    },
+    {
+      "id": "006",
+      "title": "Пицца Vegetariana",
+      "image_url": "src/assets/Pizza/pizza-vegetariana.png",
+      "content": "сметанный соус, моцарелла, копченая скаморза, горгонзола, шампиньоны, шпенат, помидоры черри, чесночный соус",
+      "price": {
+        "32sm": 23,
+        "23sm": 16
+      }
+    },
+    {
+      "id": "007",
+      "title": "Пицца Salami",
+      "image_url": "src/assets/Pizza/pizza-salami.png",
+      "content": "томатный соус, моцарелла, пикантное салями Napoli",
+      "price": {
+        "32sm": 21,
+        "23sm": 15
+      }
+    },
+    {
+      "id": "008",
+      "title": "Пицца Quattro Formaggi",
+      "image_url": "src/assets/Pizza/pizza-quattro-formaggi.png",
+      "content": "Сметанный соус, моцарелла, копченый сыр, пармезан, горгонзола, рукола",
+      "price": {
+        "32sm": 24,
+        "23sm": 16
+      }
+    },
+    {
+      "id": "009",
+      "title": "Пицца Cotto",
+      "image_url": "src/assets/Pizza/pizza-cotto.png",
+      "content": "томатный соус, моцарелла, мацарелла fior di latte, ветчина",
+      "price": {
+        "32sm": 22,
+        "23sm": 15
+      }
+    },
+    {
+      "id": "010",
+      "title": "Пицца Greca Vegan",
+      "image_url": "src/assets/Pizza/pizza-greca-vegan.png",
+      "content": "томатный соус, копченый темпех, запеченая паприка, запеченый баклажан, красный свежий лук, оливковое масло с травами, греческий сыр",
+      "price": {
+        "32sm": 23,
+        "23sm": 16
+      }
+    },
+    {
+      "id": "011",
+      "title": "Пицца Margherita",
+      "image_url": "src/assets/Pizza/pizza-margherita.png",
+      "content": "томатный соус, моцарелла, оливковое масло, базилик",
+      "price": {
+        "32sm": 19,
+        "23sm": 13
+      }
+    },
+    {
+      "id": "012",
+      "title": "Пицца Tonno",
+      "image_url": "src/assets/Pizza/pizza-tonno.png",
+      "content": "томатный соус, моцарелла, тунец, красный свежий лук, петрушка",
+      "price": {
+        "32sm": 22,
+        "23sm": 15
+      }
+    },
+    {
+      "id": "013",
+      "title": "Пицца Diavola",
+      "image_url": "src/assets/Pizza/pizza-diavola.png",
+      "content": "томатный соус, пикантное салями Napoli, моцарелла, запеченая паприка, сметанный Gervais, чили паприка",
+      "price": {
+        "32sm": 23,
+        "23sm": 16
+      }
+    },
+    {
+      "id": "014",
+      "title": "Пицца Capricciosa",
+      "image_url": "src/assets/Pizza/pizza-capricciosa.png",
+      "content": "томатный соус, моцарелла, ветчина, шампиньоны, оливки, оливковое масло",
+      "price": {
+        "32sm": 19,
+        "23sm": 14
+      }
+    },
+    {
+      "id": "015",
+      "title": "Пицца Angeli Demoni",
+      "image_url": "src/assets/Pizza/pizza-angeli-demoni.png",
+      "content": "томатный соус, моцарелла, мацарелла fior di latte, пикантное салями Napoli, копченый сыр Scamorza, базилик, баклажан",
+      "price": {
+        "32sm": 24,
+        "23sm": 16
+      }
+    }
+  ],
+  "drinks": [
+    {
+      "id": "016",
+      "title": "Апельсиновый сок 0,2",
+      "image_url": "src/assets/Drink/apelsinovy-sok-0,2.png",
+      "content": "Апельсиновый сок",
+      "price": 6
+    },
+    {
+      "id": "017",
+      "title": "Mirinda 0,33",
+      "image_url": "src/assets/Drink/mirinda-0,33.png",
+      "content": "Mirinda",
+      "price": 5
+    },
+    {
+      "id": "018",
+      "title": "Pepsi 0,33",
+      "image_url": "src/assets/Drink/pepsi-0,33.png",
+      "content": "Pepsi",
+      "price": 5
+    },
+    {
+      "id": "019",
+      "title": "Pepsi light 0,33",
+      "image_url": "src/assets/Drink/pepsi-light-0,33.png",
+      "content": "Pepsi light",
+      "price": 5
+    },
+    {
+      "id": "020",
+      "title": "Pilsner Urquell 0,33",
+      "image_url": "src/assets/Drink/pilsner-urquell-0,33.png",
+      "content": "Пиво Pilsner Urquell",
+      "price": 6
+    },
+    {
+      "id": "021",
+      "title": "Vinea 0,25",
+      "image_url": "src/assets/Drink/vinea-0,25.png",
+      "content": "Vinea",
+      "price": 5
+    },
+    {
+      "id": "022",
+      "title": "Негазированная вода 0,5",
+      "image_url": "src/assets/Drink/voda-besgaz-0,5.png",
+      "content": "Негазированная вода SanBenedetto",
+      "price": 5
+    },
+    {
+      "id": "023",
+      "title": "Газированная вода 0,5",
+      "image_url": "src/assets/Drink/voda-gaz-0,5.png",
+      "content": "Газированная вода SanBenedetto",
+      "price": 5
+    }
+  ],
+  "gifts": [
+    {
+      "id": "024",
+      "title": "Подарочная карта на 30",
+      "image_url": "src/assets/Gift/gift.png",
+      "content": "Подарочная карта на 30",
+      "price": 30
+    },
+    {
+      "id": "025",
+      "title": "Подарочная карта на 50",
+      "image_url": "src/assets/Gift/gift.png",
+      "content": "Подарочная карта на 50",
+      "price": 50
+    },
+    {
+      "id": "026",
+      "title": "Подарочная карта на 100",
+      "image_url": "src/assets/Gift/gift.png",
+      "content": "Подарочная карта на 100",
+      "price": 100
+    }
+  ],
+  "ingredients": [
+    {
+      "id": "027",
+      "title": "Анчоусы",
+      "image_url": "src/assets/Ingredience/Maso/anchousy.png"
+    },
+    {
+      "id": "028",
+      "title": "Бекон",
+      "image_url": "src/assets/Ingredience/Maso/becon.png"
+    },
+    {
+      "id": "029",
+      "title": "Курица",
+      "image_url": "src/assets/Ingredience/Maso/kurinoe-maso.png"
+    },
+    {
+      "id": "030",
+      "title": "Прошутто",
+      "image_url": "src/assets/Ingredience/Maso/prosciutto.png"
+    },
+    {
+      "id": "031",
+      "title": "Салями",
+      "image_url": "src/assets/Ingredience/Maso/salam-peperoni.png"
+    },
+    {
+      "id": "032",
+      "title": "Тунец",
+      "image_url": "src/assets/Ingredience/Maso/tunec.png"
+    },
+    {
+      "id": "033",
+      "title": "Ветчина",
+      "image_url": "src/assets/Ingredience/Maso/vetchina.png"
+    },
+    {
+      "id": "034",
+      "title": "Ананас",
+      "image_url": "src/assets/Ingredience/Ovoschi/ananas.png"
+    },
+    {
+      "id": "035",
+      "title": "Кабачок",
+      "image_url": "src/assets/Ingredience/Ovoschi/kabachok-grilovany.png"
+    },
+    {
+      "id": "036",
+      "title": "Кукуруза",
+      "image_url": "src/assets/Ingredience/Ovoschi/kukuruza.png"
+    },
+    {
+      "id": "037",
+      "title": "Лук",
+      "image_url": "src/assetsIngredience//Ovoschi/luk.png"
+    },
+    {
+      "id": "038",
+      "title": "Оливки",
+      "image_url": "src/assets/Ingredience/Ovoschi/olivky.png"
+    },
+    {
+      "id": "039",
+      "title": "Паприка с гриля",
+      "image_url": "src/assets/Ingredience/Ovoschi/paprika-grilovanaja.png"
+    },
+    {
+      "id": "040",
+      "title": "Паприка чили",
+      "image_url": "src/assets/Ingredience/Ovoschi/paprika-chili.png"
+    },
+    {
+      "id": "041",
+      "title": "Помидоры свежие",
+      "image_url": "src/assets/Ingredience/Ovoschi/pomidory-svezie.png"
+    },
+    {
+      "id": "042",
+      "title": "Помидоры запеченые",
+      "image_url": "src/assets/Ingredience/Ovoschi/pomidory-zapecheny.png"
+    },
+    {
+      "id": "043",
+      "title": "Шампиньоны",
+      "image_url": "src/assets/Ingredience/Ovoschi/schampiony.png"
+    },
+    {
+      "id": "044",
+      "title": "Шпенат",
+      "image_url": "src/assets/Ingredience/Ovoschi/spenat.png"
+    },
+    {
+      "id": "045",
+      "title": "Соус Carbonara",
+      "image_url": "src/assets/Ingredience/Sosy/carbonara-smetanovy-sos.png"
+    },
+    {
+      "id": "046",
+      "title": "Соус Сметанный",
+      "image_url": "src/assets/Ingredience/Sosy/carbonara-smetanovy-sos.png"
+    },
+    {
+      "id": "047",
+      "title": "Чесночное масло",
+      "image_url": "src/assets/Ingredience/Sosy/chesnochnoe-maslo-sos.png"
+    },
+    {
+      "id": "048",
+      "title": "Томатная паста",
+      "image_url": "src/assets/Ingredience/Sosy/tomatovy-sos.png"
+    },
+    {
+      "id": "049",
+      "title": "Бальзамический соус",
+      "image_url": "src/assets/Ingredience/Specii/balsamichesky-sos-doponitelno.png"
+    },
+    {
+      "id": "050",
+      "title": "Оливковое масло",
+      "image_url": "src/assets/Ingredience/Specii/olivkovy-sos-doponitelno.png"
+    },
+    {
+      "id": "051",
+      "title": "Соус Песто",
+      "image_url": "src/assets/Ingredience/Specii/pesto-sos-doponitelno.png"
+    },
+    {
+      "id": "052",
+      "title": "Базилик",
+      "image_url": "src/assets/Ingredience/Specii/bazilik.png"
+    },
+    {
+      "id": "053",
+      "title": "Петрушка",
+      "image_url": "src/assets/Ingredience/Specii/petruschka.png"
+    },
+    {
+      "id": "054",
+      "title": "Рукола",
+      "image_url": "src/assets/Ingredience/Specii/rucola.png"
+    },
+    {
+      "id": "055",
+      "title": "Сыр горгонзола",
+      "image_url": "src/assets/Ingredience/Syr/gorgonzola.png"
+    },
+    {
+      "id": "056",
+      "title": "Греческий сыр",
+      "image_url": "src/assets/Ingredience/Syr/grechesky-syr.png"
+    },
+    {
+      "id": "057",
+      "title": "Сыр Моцарелла",
+      "image_url": "src/assets/Ingredience/Syr/mocarella.png"
+    },
+    {
+      "id": "058",
+      "title": "Сыр пармезан",
+      "image_url": "src/assets/Ingredience/Syr/parmezan.png"
+    },
+    {
+      "id": "059",
+      "title": "Сыр Скаморза",
+      "image_url": "src/assets/Ingredience/Syr/scamorza-kopcheny.png"
+    },
+    {
+      "id": "060",
+      "title": "Традиционное тесто",
+      "image_url": "src/assets/Ingredience/Testo/gift.png"
+    },
+    {
+      "id": "061",
+      "title": "Цельнозерновое тесто",
+      "image_url": "src/assets/Ingredience/Testo/gift.png"
+    }
+  ]
 }

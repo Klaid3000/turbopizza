@@ -1,12 +1,12 @@
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
+import { Icon, TitleForIcon } from '../../../../components';
+import { ROLE } from '../../../../constants';
 import {
 	selectUserLogin,
 	selectUserRole,
 	selectUserSession,
 } from '../../../../selectors';
-import { Icon } from '../../../icon/icon';
-import { ROLE } from '../../../../constants';
 import { logout } from '../../../../actions';
 import styled from 'styled-components';
 
@@ -15,11 +15,6 @@ const RightAligned = styled.div`
 	justify-content: flex-end;
 	align-items: center;
 	margin: 25px 0 20px 0;
-`;
-
-const TitleForIcon = styled.div`
-	text-align: center;
-	margin: ${({ margin }) => margin};
 `;
 
 const ControlPanelContainer = ({ className }) => {

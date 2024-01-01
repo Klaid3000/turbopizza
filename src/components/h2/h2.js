@@ -5,6 +5,6 @@ const H2Container = ({ children, className }) => (
 );
 
 export const H2 = styled(H2Container)`
-	margin: 40px 0;
+	margin: ${({ margin = '40px 0' }) => margin};
 	color: #430808;
 `;
