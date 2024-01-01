@@ -1,5 +1,13 @@
 import { Link } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import {
+	selectUserLogin,
+	selectUserRole,
+	selectUserSession,
+} from '../../../../selectors';
 import { Icon } from '../../../icon/icon';
+import { ROLE } from '../../../../constants';
+import { logout } from '../../../../actions';
 import styled from 'styled-components';
 
 const RightAligned = styled.div`
@@ -15,6 +23,11 @@ const TitleForIcon = styled.div`
 `;
 
 const ControlPanelContainer = ({ className }) => {
+	const dispatch = useDispatch();
+	const roleId = useSelector(selectUserRole);
+	const login = useSelector(selectUserLogin);
+	const session = useSelector(selectUserSession);
+
 	return (
 		<div className={className}>
 			<RightAligned>
@@ -48,15 +61,30 @@ const ControlPanelContainer = ({ className }) => {
 					/>
 					<TitleForIcon margin="0 20px 5px 20px">Пользователи</TitleForIcon>
 				</Link>
-				<Link to="/login">
-					<Icon
-						imageUrl={require('../../../../assets/Logo/user-green.png')}
-						filter="hue-rotate(250deg)"
-						border="1px solid #000"
-						radius="50%"
-					/>
-					<TitleForIcon>Войти</TitleForIcon>
-				</Link>
+				{roleId === ROLE.GUEST ? (
+					<Link to="/login">
+						<Icon
+							imageUrl={require('../../../../assets/Logo/user-green.png')}
+							filter="hue-rotate(250deg)"
+							border="1px solid #000"
+							radius="50%"
+						/>
+						<TitleForIcon>Войти</TitleForIcon>
+					</Link>
+				) : (
+					<Link>
+						<Icon
+							onClick={() => dispatch(logout(session))}
+							imageUrl={require('../../../../assets/Logo/logout.png')}
+							filter="hue-rotate(45deg)"
+							border="1px solid #000"
+							radius="50%"
+						/>
+						<TitleForIcon onClick={() => dispatch(logout(session))}>
+							{login}
+						</TitleForIcon>
+					</Link>
+				)}
 				<Link to="/basket">
 					<Icon
 						margin="0 90px 0 30px"

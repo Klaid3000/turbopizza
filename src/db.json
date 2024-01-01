@@ -243,16 +243,193 @@
 		{
 			"id": "025",
 			"title": "Подарочная карта на 50",
-			"image_url": "src/assets/Drink/Gift/gift.png",
+			"image_url": "src/assets/Gift/gift.png",
 			"content": "Подарочная карта на 50",
 			"price": 50
 		},
 		{
 			"id": "026",
 			"title": "Подарочная карта на 100",
-			"image_url": "src/assets/Drink/Gift/gift.png",
+			"image_url": "src/assets/Gift/gift.png",
 			"content": "Подарочная карта на 100",
 			"price": 100
+		}
+	],
+	"ingredients": [
+		{
+			"id": "027",
+			"title": "Анчоусы",
+			"image_url": "src/assets/Ingredience/Maso/anchousy.png"
+		},
+		{
+			"id": "028",
+			"title": "Бекон",
+			"image_url": "src/assets/Ingredience/Maso/becon.png"
+		},
+		{
+			"id": "029",
+			"title": "Курица",
+			"image_url": "src/assets/Ingredience/Maso/kurinoe-maso.png"
+		},
+		{
+			"id": "030",
+			"title": "Прошутто",
+			"image_url": "src/assets/Ingredience/Maso/prosciutto.png"
+		},
+		{
+			"id": "031",
+			"title": "Салями",
+			"image_url": "src/assets/Ingredience/Maso/salam-peperoni.png"
+		},
+		{
+			"id": "032",
+			"title": "Тунец",
+			"image_url": "src/assets/Ingredience/Maso/tunec.png"
+		},
+		{
+			"id": "033",
+			"title": "Ветчина",
+			"image_url": "src/assets/Ingredience/Maso/vetchina.png"
+		},
+		{
+			"id": "034",
+			"title": "Ананас",
+			"image_url": "src/assets/Ingredience/Ovoschi/ananas.png"
+		},
+		{
+			"id": "035",
+			"title": "Кабачок",
+			"image_url": "src/assets/Ingredience/Ovoschi/kabachok-grilovany.png"
+		},
+		{
+			"id": "036",
+			"title": "Кукуруза",
+			"image_url": "src/assets/Ingredience/Ovoschi/kukuruza.png"
+		},
+		{
+			"id": "037",
+			"title": "Лук",
+			"image_url": "src/assetsIngredience//Ovoschi/luk.png"
+		},
+		{
+			"id": "038",
+			"title": "Оливки",
+			"image_url": "src/assets/Ingredience/Ovoschi/olivky.png"
+		},
+		{
+			"id": "039",
+			"title": "Паприка с гриля",
+			"image_url": "src/assets/Ingredience/Ovoschi/paprika-grilovanaja.png"
+		},
+		{
+			"id": "040",
+			"title": "Паприка чили",
+			"image_url": "src/assets/Ingredience/Ovoschi/paprika-chili.png"
+		},
+		{
+			"id": "041",
+			"title": "Помидоры свежие",
+			"image_url": "src/assets/Ingredience/Ovoschi/pomidory-svezie.png"
+		},
+		{
+			"id": "042",
+			"title": "Помидоры запеченые",
+			"image_url": "src/assets/Ingredience/Ovoschi/pomidory-zapecheny.png"
+		},
+		{
+			"id": "043",
+			"title": "Шампиньоны",
+			"image_url": "src/assets/Ingredience/Ovoschi/schampiony.png"
+		},
+		{
+			"id": "044",
+			"title": "Шпенат",
+			"image_url": "src/assets/Ingredience/Ovoschi/spenat.png"
+		},
+		{
+			"id": "045",
+			"title": "Соус Carbonara",
+			"image_url": "src/assets/Ingredience/Sosy/carbonara-smetanovy-sos.png"
+		},
+		{
+			"id": "046",
+			"title": "Соус Сметанный",
+			"image_url": "src/assets/Ingredience/Sosy/carbonara-smetanovy-sos.png"
+		},
+		{
+			"id": "047",
+			"title": "Чесночное масло",
+			"image_url": "src/assets/Ingredience/Sosy/chesnochnoe-maslo-sos.png"
+		},
+		{
+			"id": "048",
+			"title": "Томатная паста",
+			"image_url": "src/assets/Ingredience/Sosy/tomatovy-sos.png"
+		},
+		{
+			"id": "049",
+			"title": "Бальзамический соус",
+			"image_url": "src/assets/Ingredience/Specii/balsamichesky-sos-doponitelno.png"
+		},
+		{
+			"id": "050",
+			"title": "Оливковое масло",
+			"image_url": "src/assets/Ingredience/Specii/olivkovy-sos-doponitelno.png"
+		},
+		{
+			"id": "051",
+			"title": "Соус Песто",
+			"image_url": "src/assets/Ingredience/Specii/pesto-sos-doponitelno.png"
+		},
+		{
+			"id": "052",
+			"title": "Базилик",
+			"image_url": "src/assets/Ingredience/Specii/bazilik.png"
+		},
+		{
+			"id": "053",
+			"title": "Петрушка",
+			"image_url": "src/assets/Ingredience/Specii/petruschka.png"
+		},
+		{
+			"id": "054",
+			"title": "Рукола",
+			"image_url": "src/assets/Ingredience/Specii/rucola.png"
+		},
+		{
+			"id": "055",
+			"title": "Сыр горгонзола",
+			"image_url": "src/assets/Ingredience/Syr/gorgonzola.png"
+		},
+		{
+			"id": "056",
+			"title": "Греческий сыр",
+			"image_url": "src/assets/Ingredience/Syr/grechesky-syr.png"
+		},
+		{
+			"id": "057",
+			"title": "Сыр Моцарелла",
+			"image_url": "src/assets/Ingredience/Syr/mocarella.png"
+		},
+		{
+			"id": "058",
+			"title": "Сыр пармезан",
+			"image_url": "src/assets/Ingredience/Syr/parmezan.png"
+		},
+		{
+			"id": "059",
+			"title": "Сыр Скаморза",
+			"image_url": "src/assets/Ingredience/Syr/scamorza-kopcheny.png"
+		},
+		{
+			"id": "060",
+			"title": "Традиционное тесто",
+			"image_url": "src/assets/Ingredience/Testo/gift.png"
+		},
+		{
+			"id": "061",
+			"title": "Цельнозерновое тесто",
+			"image_url": "src/assets/Ingredience/Testo/gift.png"
 		}
 	]
 }

@@ -1,5 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import { Header, Footer } from './components';
+import { Authorization } from './pages';
 import styled from 'styled-components';
 
 const AppColum = styled.div`
@@ -13,11 +14,7 @@ const AppColum = styled.div`
 `;
 
 const Content = styled.div`
-	padding: 150px 0;
-`;
-
-const H2 = styled.h2`
-	text-align: center;
+	padding: 120px 0;
 `;
 
 export const Pizza = () => {
@@ -26,7 +23,6 @@ export const Pizza = () => {
 			<Header />
 			<AppColum>
 				<Content>
-					<H2>Контент страницы</H2>
 					<Routes>
 						<Route path="/" element={<div>Главная страница</div>} />
 						<Route
@@ -38,7 +34,7 @@ export const Pizza = () => {
 							path="/menu/product/title"
 							element={<div>Страница выбранного продукта</div>}
 						/>
-						<Route path="/login" element={<div>Авторизация</div>} />
+						<Route path="/login" element={<Authorization />} />
 						<Route path="/register" element={<div>Регистрация</div>} />
 						<Route path="/users" element={<div>Пользователи</div>} />
 						<Route
