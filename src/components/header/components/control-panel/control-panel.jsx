@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { Icon, TitleForIcon } from '../../../../components';
+import { Icon, TitleForIcon } from '../../../index';
 import { ROLE } from '../../../../constants';
 import {
 	selectUserLogin,

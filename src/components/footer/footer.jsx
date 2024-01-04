@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Icon } from '../../components';
+import { Icon } from '../index';
 import styled from 'styled-components';
 
 const FooterContainer = ({ className }) => {
