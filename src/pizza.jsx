@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import { Header, Footer } from './components';
-import { Authorization, Home, Registration, Users } from './pages';
+import { Authorization, Drinks, Gifts, Home, Pizzas, Registration, Users } from './pages';
 import styled from 'styled-components';
 
 const AppColum = styled.div`
@@ -10,7 +10,7 @@ const AppColum = styled.div`
 	width: 100%;
 	min-height: 100%;
 	margin: 0 auto;
-	background-color: #f7ffa9;
+	// background-color: #f7ffa9;
 `;
 
 const Page = styled.div`
@@ -30,10 +30,9 @@ export const Pizza = () => {
 							element={<div>Составь пиццу сам</div>}
 						/>
 						<Route path="/menu" element={<div>Меню</div>} />
-						<Route
-							path="/menu/product/title"
-							element={<div>Страница выбранного продукта</div>}
-						/>
+						<Route path="/menu/pizzas/:title" element={<Pizzas />} />
+						<Route path="/menu/drinks/:title" element={<Drinks />} />
+						<Route path="/menu/gifts/:title" element={<Gifts />} />
 						<Route path="/login" element={<Authorization />} />
 						<Route path="/register" element={<Registration />} />
 						<Route path="/users" element={<Users />} />

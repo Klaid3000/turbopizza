@@ -15,7 +15,8 @@ export const Header = styled(HeaderContainer)`
 	top: 0px;
 	width: 100%;
 	height: 120px;
-	background-color: #ffe9e4;
+	// background-color: #ffe9e4;
+	background-color: #e8d8f3;
 	box-shadow: 0px -2px 17px #000;
 	z-index: 10;
 `;

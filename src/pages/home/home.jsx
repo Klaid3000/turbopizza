@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { Icon, H2, TitleForIcon } from '../../components';

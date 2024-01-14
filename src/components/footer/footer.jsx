@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import { useEffect, useState } from 'react';
 import { Icon } from '../index';
 import styled from 'styled-components';
@@ -86,7 +87,8 @@ export const Footer = styled(FooterContainer)`
 	padding: 20px 70px;
 	color: #430808;
 	font-weight: bold;
-	background-color: #ffe9e4;
+	// background-color: #ffe9e4;
+	background-color: #e8d8f3;
 	box-shadow: 0px 2px 17px #000;
 
 	& .weather {

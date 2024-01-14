@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import { Icon } from '../../../../components';
 import { TableRow } from '../table-row/table-row';
 import styled from 'styled-components';
