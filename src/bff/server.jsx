@@ -1,5 +1,8 @@
 import {
 	authorize,
+	fetchDrinks,
+	fetchGifts,
+	fetchPizzas,
 	fetchRoles,
 	fetchUsers,
 	logout,
@@ -10,6 +13,9 @@ import {
 
 export const server = {
 	authorize,
+	fetchDrinks,
+	fetchGifts,
+	fetchPizzas,
 	logout,
 	register,
 	fetchUsers,

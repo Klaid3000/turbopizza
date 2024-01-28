@@ -1,6 +1,7 @@
 /* eslint-disable no-undef */
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { useParams } from 'react-router-dom';
 import { getDrink } from '../../../bff/api';
 import { setDrink } from '../../../actions';
 import { Button, H2, Icon } from '../../../components';
@@ -10,11 +11,12 @@ const DrinksContainer = ({ className }) => {
 	const drink = useSelector((state) => state.drink);
 	const drinkPrice = drink.price;
 	const dispatch = useDispatch();
+	const params = useParams();
 
 	useEffect(() => {
 		const fetchData = async () => {
-			const titleToFind = 'Pepsi 0,33 л';
-			const drinkData = await getDrink(titleToFind);
+			const idToFind = params.id;
+			const drinkData = await getDrink(idToFind);
 			dispatch(setDrink(drinkData));
 		};
 
@@ -40,7 +42,7 @@ const DrinksContainer = ({ className }) => {
 				width="300px"
 				height="300px"
 				radius="20px"
-				margin="-20px 0 0 0"
+				margin="10px 0 0 0"
 			></Icon>
 			<H2 margin="10px 0 0 0">{drink ? drink.title : 'Loading...'}</H2>
 			<Button onClick={addToCart} radius="5px" border="none" height="84px">
@@ -60,7 +62,7 @@ export const Drinks = styled(DrinksContainer)`
 	align-items: center;
 	width: 500px;
 	height: 500px;
-	background-color: #fff;
+	background-color: #e8d8f3;
 	border-radius: 10px;
 	display: flex;
 	flex-direction: column;

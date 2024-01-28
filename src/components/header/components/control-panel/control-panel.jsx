@@ -24,6 +24,11 @@ const ControlPanelContainer = ({ className }) => {
 	const login = useSelector(selectUserLogin);
 	const session = useSelector(selectUserSession);
 
+	const onLogout = () => {
+		dispatch(logout(session));
+		sessionStorage.removeItem('userData');
+	};
+
 	return (
 		<div className={className}>
 			<RightAligned>
@@ -70,7 +75,7 @@ const ControlPanelContainer = ({ className }) => {
 				) : (
 					<Link>
 						<Icon
-							onClick={() => dispatch(logout(session))}
+							onClick={onLogout}
 							imageUrl={require('../../../../assets/Logo/logout.png')}
 							filter="hue-rotate(45deg)"
 							border="1px solid #000"
@@ -101,6 +106,6 @@ export const ControlPanel = styled(ControlPanelContainer)`
 	}
 
 	a:hover {
-		color: #c95d5d;
+		color: #ff5733;
 	}
 `;

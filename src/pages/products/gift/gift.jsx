@@ -1,6 +1,7 @@
 /* eslint-disable no-undef */
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { useParams } from 'react-router-dom';
 import { getGift } from '../../../bff/api';
 import { setGift } from '../../../actions';
 import { Button, H2, Icon } from '../../../components';
@@ -10,11 +11,12 @@ const GiftsContainer = ({ className }) => {
 	const gift = useSelector((state) => state.gift);
 	const giftPrice = gift.price;
 	const dispatch = useDispatch();
+	const params = useParams();
 
 	useEffect(() => {
 		const fetchData = async () => {
-			const titleToFind = 'Подарочная карта на 30 руб';
-			const giftData = await getGift(titleToFind);
+			const idToFind = params.id;
+			const giftData = await getGift(idToFind);
 			dispatch(setGift(giftData));
 		};
 
@@ -60,7 +62,7 @@ export const Gifts = styled(GiftsContainer)`
 	align-items: center;
 	width: 500px;
 	height: 500px;
-	background-color: #fff;
+	background-color: #e8d8f3;
 	border-radius: 10px;
 	display: flex;
 	flex-direction: column;

@@ -12,8 +12,8 @@ const ButtonContainer = ({ children, className, ...props }) => {
 export const Button = styled(ButtonContainer)`
 	width: ${({ width = '100%' }) => width};
 	align-items: center;
-	font-size: 18px;
-	height: ${({ height = '32px' }) => height};
+	font-size: ${({ size = '18px' }) => size};
+	height: ${({ height = '40px' }) => height};
 	border: ${({ border = '1px solid #000' }) => border};
 	border-radius: ${({ radius = '20px' }) => radius};
 	background-color: #ff7021;

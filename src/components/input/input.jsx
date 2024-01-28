@@ -9,9 +9,9 @@ const InputContainer = forwardRef(({ className, ...props }, ref) => {
 export const Input = styled(InputContainer)`
 	width: ${({ width = '100%' }) => width};
 	height: 40px;
-	margin: 0 0 10px;
+	margin: ${({ margin = '0 0 10px' }) => margin};
 	padding: 10px;
 	font-size: 18px;
 	border: 1px solid #000;
-	border-radius: 15px;
+	border-radius: ${({ radius = '15px' }) => radius};
 `;

@@ -1,23 +1,54 @@
+import { useLayoutEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import { Routes, Route } from 'react-router-dom';
 import { Header, Footer } from './components';
-import { Authorization, Drinks, Gifts, Home, Pizzas, Registration, Users } from './pages';
+import {
+	Authorization,
+	Drinks,
+	Gifts,
+	Home,
+	Menu,
+	Pizzas,
+	Registration,
+	Users,
+} from './pages';
+import { setUser } from './actions';
 import styled from 'styled-components';
 
 const AppColum = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	width: 100%;
+	position: relative;
+	width: 1500px;
 	min-height: 100%;
 	margin: 0 auto;
-	// background-color: #f7ffa9;
+	background-color: #aeaeae;
 `;
 
 const Page = styled.div`
-	padding: 150px 0;
+	margin: 120px 0;
 `;
 
 export const Pizza = () => {
+	const dispatch = useDispatch();
+	useLayoutEffect(() => {
+		const currentUserDataJSON = sessionStorage.getItem('userData');
+
+		if (!currentUserDataJSON) {
+			return;
+		}
+
+		const currentUserData = JSON.parse(currentUserDataJSON);
+
+		dispatch(
+			setUser({
+				...currentUserData,
+				roleId: Number(currentUserData.roleId),
+			}),
+		);
+	}, [dispatch]);
+
 	return (
 		<>
 			<Header />
@@ -29,10 +60,10 @@ export const Pizza = () => {
 							path="/makeyourpizza"
 							element={<div>Составь пиццу сам</div>}
 						/>
-						<Route path="/menu" element={<div>Меню</div>} />
-						<Route path="/menu/pizzas/:title" element={<Pizzas />} />
-						<Route path="/menu/drinks/:title" element={<Drinks />} />
-						<Route path="/menu/gifts/:title" element={<Gifts />} />
+						<Route path="/menu" element={<Menu />} />
+						<Route path="/menu/pizza/:id" element={<Pizzas />} />
+						<Route path="/menu/drink/:id" element={<Drinks />} />
+						<Route path="/menu/gift/:id" element={<Gifts />} />
 						<Route path="/login" element={<Authorization />} />
 						<Route path="/register" element={<Registration />} />
 						<Route path="/users" element={<Users />} />
