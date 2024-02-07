@@ -13,3 +13,6 @@ export * from './get-drinks';
 export * from './add-session';
 export * from './get-session';
 export * from './delete-session';
+export * from './get-basket';
+export * from './add-to-basket';
+export * from './delete-from-basket';

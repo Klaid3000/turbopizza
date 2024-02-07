@@ -1,9 +1,10 @@
-import { useLayoutEffect } from 'react';
+import { useLayoutEffect, useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { Routes, Route } from 'react-router-dom';
 import { Header, Footer } from './components';
 import {
 	Authorization,
+	Basket,
 	Drinks,
 	Gifts,
 	Home,
@@ -13,6 +14,7 @@ import {
 	Users,
 } from './pages';
 import { setUser } from './actions';
+import { addProductToBasket, getBasket, deleteProductFromBasket } from './bff/api';
 import styled from 'styled-components';
 
 const AppColum = styled.div`
@@ -20,10 +22,10 @@ const AppColum = styled.div`
 	flex-direction: column;
 	justify-content: space-between;
 	position: relative;
-	width: 1500px;
+	width: 100%;
 	min-height: 100%;
 	margin: 0 auto;
-	background-color: #aeaeae;
+	// background-color: #aeaeae;
 `;
 
 const Page = styled.div`
@@ -32,6 +34,10 @@ const Page = styled.div`
 
 export const Pizza = () => {
 	const dispatch = useDispatch();
+	const [basket, setBasket] = useState([]);
+	const [totalPrice, setTotalPrice] = useState(0);
+	const [totalCount, setTotalCount] = useState(0);
+
 	useLayoutEffect(() => {
 		const currentUserDataJSON = sessionStorage.getItem('userData');
 
@@ -49,9 +55,55 @@ export const Pizza = () => {
 		);
 	}, [dispatch]);
 
+	const addToBasket = ({ title, size, price }) => {
+		addProductToBasket(title, size, price)
+			.then((response) => response.json())
+			.then((data) => setBasket(data));
+	};
+
+	useEffect(() => {
+		getBasket().then((data) => {
+			setBasket(data);
+			calculateTotalPrice(data);
+			calculateTotalCount(data);
+		});
+	}, [basket]);
+
+	const calculateTotalPrice = (basketItems) => {
+		const total = basketItems.reduce((sum, item) => sum + item.price, 0);
+		setTotalPrice(total);
+	};
+
+	const calculateTotalCount = (basketItems) => {
+		const total = basketItems.length;
+		setTotalCount(total);
+	};
+
+	const handleRemoveItem = (productId) => {
+		deleteProductFromBasket(productId)
+			.then((response) => {
+				if (response.ok) {
+					setBasket((prevBasket) => {
+						calculateTotalPrice(
+							prevBasket.filter((item) => item.id !== productId),
+						);
+						return prevBasket.filter((item) => item.id !== productId);
+					});
+				} else {
+					console.error(
+						'Error removing item from basket:',
+						response.statusText,
+					);
+				}
+			})
+			.catch((error) => {
+				console.error('Error removing item from basket:', error);
+			});
+	};
+
 	return (
 		<>
-			<Header />
+			<Header totalCount={totalCount} />
 			<AppColum>
 				<Page>
 					<Routes>
@@ -60,7 +112,10 @@ export const Pizza = () => {
 							path="/makeyourpizza"
 							element={<div>Составь пиццу сам</div>}
 						/>
-						<Route path="/menu" element={<Menu />} />
+						<Route
+							path="/menu"
+							element={<Menu addToBasket={addToBasket} />}
+						/>
 						<Route path="/menu/pizza/:id" element={<Pizzas />} />
 						<Route path="/menu/drink/:id" element={<Drinks />} />
 						<Route path="/menu/gift/:id" element={<Gifts />} />
@@ -71,7 +126,16 @@ export const Pizza = () => {
 							path="/addpizza"
 							element={<div>Добавление новой пиццы</div>}
 						/>
-						<Route path="/basket" element={<div>Корзина</div>} />
+						<Route
+							path="/basket"
+							element={
+								<Basket
+									totalPrice={totalPrice}
+									handleRemoveItem={handleRemoveItem}
+									basket={basket}
+								/>
+							}
+						/>
 						<Route path="*" element={<div>Ошибка</div>} />
 					</Routes>
 				</Page>

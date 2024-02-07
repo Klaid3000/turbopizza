@@ -30,9 +30,6 @@ const SearchContainer = ({ className, searchPhrase, onChange }) => {
 				<li>
 					<a href="/menu#подарочные-карты">Подарочные карты</a>
 				</li>
-				<li>
-					<a href="/menu#контакты">Контакты</a>
-				</li>
 			</ul>
 		</div>
 	);
@@ -43,7 +40,7 @@ export const Search = styled(SearchContainer)`
 	width: 300px;
 	height: 100%;
 	padding: 10px;
-	margin: 150px 0 0 30px;
+	margin: 80px 0 0 30px;
 
 	& > div {
 		position: absolute;

@@ -231,19 +231,19 @@
   "gifts": [
     {
       "id": "023",
-      "title": "Подарочная карта на 30 руб",
+      "title": "Подарочная карта",
       "image_url": "src/assets/Gift/gift.png",
       "price": 30
     },
     {
       "id": "024",
-      "title": "Подарочная карта на 50 руб",
+      "title": "Подарочная картаб",
       "image_url": "src/assets/Gift/gift.png",
       "price": 50
     },
     {
       "id": "025",
-      "title": "Подарочная карта на 100 руб",
+      "title": "Подарочная карта",
       "image_url": "src/assets/Gift/gift.png",
       "price": 100
     }
@@ -425,5 +425,6 @@
       "image_url": "src/assets/Ingredience/Testo/gift.png"
     }
   ],
-  "sessions": []
+  "sessions": [],
+  "basket": []
 }

@@ -1,12 +1,14 @@
-import styled from 'styled-components';
 import { ControlPanel, Logo } from './components';
+import styled from 'styled-components';
 
-const HeaderContainer = ({ className }) => (
-	<header className={className}>
-		<Logo width="300px" height="300px" margin="-68px 0 0 40px" />
-		<ControlPanel></ControlPanel>
-	</header>
-);
+const HeaderContainer = ({ className, totalCount }) => {
+	return (
+		<header className={className}>
+			<Logo width="250px" height="250px" margin="-48px 0 0 40px" />
+			<ControlPanel totalCount={totalCount}></ControlPanel>
+		</header>
+	);
+};
 
 export const Header = styled(HeaderContainer)`
 	display: flex;

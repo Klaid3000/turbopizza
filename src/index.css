@@ -8,8 +8,10 @@ body {
 		'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	background-color: #a3e5c9;
 	/* background-image: url(./assets/Background/background.png);
-	background-size: cover; */
+	background-size: cover;
+	background-position: center; */
 }
 
 html,

@@ -14,6 +14,7 @@ export const Button = styled(ButtonContainer)`
 	align-items: center;
 	font-size: ${({ size = '18px' }) => size};
 	height: ${({ height = '40px' }) => height};
+	margin: ${({ margin = '0px' }) => margin};
 	border: ${({ border = '1px solid #000' }) => border};
 	border-radius: ${({ radius = '20px' }) => radius};
 	background-color: #ff7021;

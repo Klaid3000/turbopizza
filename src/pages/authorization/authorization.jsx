@@ -9,8 +9,8 @@ import { Input, Button, H2, AuthFormError } from '../../components';
 import { useResetForm } from '../../hooks';
 import { setUser } from '../../actions';
 import { selectUserRole } from '../../selectors';
-import styled from 'styled-components';
 import { ROLE } from '../../constants';
+import styled from 'styled-components';
 
 const authFormSchema = yup.object().shape({
 	login: yup
@@ -116,6 +116,7 @@ export const Authorization = styled(AuthorizationContainer)`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	margin: auto;
 
 	& > form {
 		display: flex;

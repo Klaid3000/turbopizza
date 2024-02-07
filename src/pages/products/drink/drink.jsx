@@ -1,15 +1,18 @@
 /* eslint-disable no-undef */
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { getDrink } from '../../../bff/api';
 import { setDrink } from '../../../actions';
 import { Button, H2, Icon } from '../../../components';
+import { addProductToBasket } from '../../../bff/api';
 import styled from 'styled-components';
 
 const DrinksContainer = ({ className }) => {
+	// eslint-disable-next-line no-unused-vars
+	const [basket, setBasket] = useState([]);
 	const drink = useSelector((state) => state.drink);
-	const drinkPrice = drink.price;
+	const price = drink.price;
 	const dispatch = useDispatch();
 	const params = useParams();
 
@@ -24,12 +27,13 @@ const DrinksContainer = ({ className }) => {
 	}, [dispatch]);
 
 	const addToCart = () => {
-		if (drink && drinkPrice !== null) {
-			console.log(`Добавить в корзину: ${drink.title}, Цена: ${drinkPrice}`);
+		const size = '';
+		if (drink && price !== null) {
+			addProductToBasket(drink.title, size, price)
+				.then((response) => response.json())
+				.then((data) => setBasket(data));
 		}
 	};
-
-	console.log(drink);
 
 	return (
 		<div className={className}>
@@ -46,27 +50,21 @@ const DrinksContainer = ({ className }) => {
 			></Icon>
 			<H2 margin="10px 0 0 0">{drink ? drink.title : 'Loading...'}</H2>
 			<Button onClick={addToCart} radius="5px" border="none" height="84px">
-				<div>Добавить в корзину</div> <div>{drinkPrice} руб.</div>
+				<div>Добавить в корзину</div> <div>{price} руб.</div>
 			</Button>
 		</div>
 	);
 };
 
 export const Drinks = styled(DrinksContainer)`
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
 	padding: 20px;
+	margin: 35px auto;
 	text-align: center;
-	align-items: center;
 	width: 500px;
 	height: 500px;
-	background-color: #e8d8f3;
+	background-color: #fff;
+	border: 1px solid #fff;
 	border-radius: 10px;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
 
 	button {
 		display: flex;

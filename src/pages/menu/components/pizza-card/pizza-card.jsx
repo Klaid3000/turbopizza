@@ -3,23 +3,17 @@ import { Link } from 'react-router-dom';
 import { Icon } from '../../../../components';
 import styled from 'styled-components';
 
-const PizzaCardContainer = ({
-	className,
-	id,
-	title,
-	imgUrl,
-	ingredients,
-	price,
-	addToBasket,
-}) => {
+const PizzaCardContainer = ({ className, id, title, imgUrl, price, addToBasket }) => {
 	const addToBasketClassicSize = () => {
 		const size = '32sm';
-		addToBasket({ title, size });
+		const classicPrice = price[size];
+		addToBasket({ title, size, price: classicPrice });
 	};
 
 	const addToBasketSmallSize = () => {
 		const size = '23sm';
-		addToBasket({ title, size });
+		const smallPrice = price[size];
+		addToBasket({ title, size, price: smallPrice });
 	};
 
 	return (
@@ -36,7 +30,6 @@ const PizzaCardContainer = ({
 			</Link>
 			<div className="post-card-info">
 				<h3>{title}</h3>
-				<p>{ingredients}</p>
 				<div className="button-group">
 					<button
 						className="classic-size-button"

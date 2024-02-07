@@ -3,7 +3,11 @@ import { Link } from 'react-router-dom';
 import { Button, Icon } from '../../../../components';
 import styled from 'styled-components';
 
-const DrinkCardContainer = ({ className, id, title, imgUrl, price }) => {
+const DrinkCardContainer = ({ className, id, title, imgUrl, price, addToBasket }) => {
+	const addToBasketDrink = () => {
+		addToBasket({ title, price });
+	};
+
 	return (
 		<div className={className}>
 			<Link to={`/menu/drink/${id}`}>
@@ -18,7 +22,9 @@ const DrinkCardContainer = ({ className, id, title, imgUrl, price }) => {
 			</Link>
 			<div className="post-card-info">
 				<h3>{title}</h3>
-				<Button width="116px">{price}руб.</Button>
+				<Button width="116px" onClick={addToBasketDrink}>
+					{price}руб.
+				</Button>
 			</div>
 		</div>
 	);

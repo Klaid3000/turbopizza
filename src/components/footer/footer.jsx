@@ -78,18 +78,21 @@ const FooterContainer = ({ className }) => {
 };
 
 export const Footer = styled(FooterContainer)`
+	position: fixed;
 	display: flex;
 	text-align: center;
 	justify-content: space-between;
 	align-items: center;
+	bottom: 0;
 	width: 100%;
-	height: 120px;
+	height: 100px;
 	padding: 20px 70px;
 	color: #430808;
 	font-weight: bold;
 	// background-color: #ffe9e4;
 	background-color: #e8d8f3;
 	box-shadow: 0px 2px 17px #000;
+	z-index: 10;
 
 	& .weather {
 		margin-bottom: 10px;

@@ -115,6 +115,7 @@ export const Registration = styled(RegistrationContainer)`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	margin: auto;
 
 	& > form {
 		display: flex;

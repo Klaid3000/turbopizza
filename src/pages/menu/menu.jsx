@@ -1,17 +1,16 @@
 /* eslint-disable no-undef */
 import { useEffect, useState } from 'react';
-import { H2, Icon } from '../../components';
+import { H2 } from '../../components';
 import { DrinkCard, GiftCard, PizzaCard, Search } from './components';
 import { useServerRequest } from '../../hooks';
 import styled from 'styled-components';
 
-const MenuContainer = ({ className }) => {
+const MenuContainer = ({ className, addToBasket }) => {
 	const [pizzas, setPizzas] = useState([]);
 	const [drinks, setDrinks] = useState([]);
 	const [gifts, setGifts] = useState([]);
 	const [searchPhrase, setSearchPhrase] = useState('');
 	const [shouldSearch, setShouldSearch] = useState(false);
-	const [basket, setBasket] = useState([]);
 	const requestServer = useServerRequest();
 
 	useEffect(() => {
@@ -31,28 +30,20 @@ const MenuContainer = ({ className }) => {
 		setShouldSearch(!shouldSearch);
 	};
 
-	const addToBasket = ({ title, size }) => {
-		setBasket((prevBasket) => [...prevBasket, { title, size }]);
-	};
-
-	useEffect(() => {
-		console.log(basket);
-	}, [basket]);
-
 	return (
 		<div className={className}>
-			<div className="image">
+			{/* <div className="image">
 				<Icon
 					imageUrl={require(`../../assets/Background/background.png`)}
-					width="1500px"
+					width="1903px"
 					height="155px"
 					margin="0 0 0 0"
 				></Icon>
-			</div>
+			</div> */}
 			<Search searchPhrase={searchPhrase} onChange={onSearch} />
 			<div className="product-block">
 				<div id="пиццы"></div>
-				<H2 margin="150px 0 0 40px">Пиццы</H2>
+				<H2 margin="80px 0 0 40px">Пиццы</H2>
 				{pizzas.length ? (
 					<div className="product-list">
 						{pizzas.map(({ id, title, imgUrl, ingredients, price }) => (
@@ -81,6 +72,7 @@ const MenuContainer = ({ className }) => {
 								title={title}
 								imgUrl={imgUrl}
 								price={price}
+								addToBasket={addToBasket}
 							/>
 						))}
 					</div>
@@ -98,13 +90,13 @@ const MenuContainer = ({ className }) => {
 								title={title}
 								imgUrl={imgUrl}
 								price={price}
+								addToBasket={addToBasket}
 							/>
 						))}
 					</div>
 				) : (
 					<div className="no-product-found">Совпадений не найдено</div>
 				)}
-				<div id="контакты"></div>
 			</div>
 		</div>
 	);
@@ -113,27 +105,26 @@ const MenuContainer = ({ className }) => {
 export const Menu = styled(MenuContainer)`
 	display: flex;
 	justify-content: space-between;
-	z-index: 2;
 
-	& .product-block {
-		width: 1180px;
+	.product-block {
+		width: 100%;
 		margin-left: 300px;
-		z-index: 5;
 	}
 
-	& .image {
+	.image {
 		position: absolute;
 	}
 
-	& .product-list {
+	.product-list {
 		display: flex;
 		flex-wrap: wrap;
+		text-align: center;
 		justify-content: space-between;
 		padding: 20px 40px;
 		border-bottom: 1px solid #ddd;
 	}
 
-	& .no-product-found {
+	.no-product-found {
 		padding: 20px 40px;
 		color: #333;
 		font-weight: bold;

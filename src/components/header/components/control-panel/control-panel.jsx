@@ -18,7 +18,7 @@ const RightAligned = styled.div`
 	margin: 25px 0 20px 0;
 `;
 
-const ControlPanelContainer = ({ className }) => {
+const ControlPanelContainer = ({ className, totalCount }) => {
 	const dispatch = useDispatch();
 	const roleId = useSelector(selectUserRole);
 	const login = useSelector(selectUserLogin);
@@ -92,6 +92,7 @@ const ControlPanelContainer = ({ className }) => {
 						imageUrl={require('../../../../assets/Logo/basket.png')}
 					/>
 					<TitleForIcon margin="0 90px 0 20px">Корзина</TitleForIcon>
+					<p>{totalCount}</p>
 				</Link>
 			</RightAligned>
 		</div>
@@ -99,6 +100,9 @@ const ControlPanelContainer = ({ className }) => {
 };
 
 export const ControlPanel = styled(ControlPanelContainer)`
+	display: flex;
+	justify-content: space-between;
+
 	a {
 		text-decoration: none;
 		color: #430808;
@@ -107,5 +111,11 @@ export const ControlPanel = styled(ControlPanelContainer)`
 
 	a:hover {
 		color: #ff5733;
+	}
+
+	p {
+		position: absolute;
+		top: 78px;
+		right: 118px;
 	}
 `;
