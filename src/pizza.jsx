@@ -67,7 +67,7 @@ export const Pizza = () => {
 			calculateTotalPrice(data);
 			calculateTotalCount(data);
 		});
-	}, [basket]);
+	}, []);
 
 	const calculateTotalPrice = (basketItems) => {
 		const total = basketItems.reduce((sum, item) => sum + item.price, 0);

@@ -426,5 +426,30 @@
     }
   ],
   "sessions": [],
-  "basket": []
+  "basket": [
+    {
+      "title": "Пицца Napoli",
+      "size": "32sm",
+      "price": 23,
+      "id": 1
+    },
+    {
+      "title": "Пицца Gorgo Pere",
+      "size": "32sm",
+      "price": 21,
+      "id": 2
+    },
+    {
+      "title": "Пицца Don Giovanni",
+      "size": "32sm",
+      "price": 25,
+      "id": 3
+    },
+    {
+      "title": "Пицца Carbonara",
+      "size": "32sm",
+      "price": 24,
+      "id": 4
+    }
+  ]
 }
