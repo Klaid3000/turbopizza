@@ -1,20 +1,26 @@
 /* eslint-disable no-undef */
 import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { useParams } from 'react-router-dom';
+import { useMatch, useParams, useNavigate } from 'react-router-dom';
 import { getPizza } from '../../../bff/api';
 import { setPizza } from '../../../actions';
 import { Button, H2, Icon } from '../../../components';
 import { addProductToBasket } from '../../../bff/api';
+import { PizzaCreate } from './components';
+import { selectPizza } from '../../../selectors';
+import { useServerRequest } from '../../../hooks';
 import styled from 'styled-components';
 
 const PizzasContainer = ({ className }) => {
+	const pizza = useSelector(selectPizza);
 	const [selectedPizza, setSelectedPizza] = useState('');
 	// eslint-disable-next-line no-unused-vars
 	const [basket, setBasket] = useState([]);
-	const pizza = useSelector((state) => state.pizza);
 	const dispatch = useDispatch();
 	const params = useParams();
+	const isCreating = !!useMatch('/addpizza');
+	const navigate = useNavigate();
+	const requestServer = useServerRequest();
 
 	const handlePizzaSizeChange = (event) => {
 		setSelectedPizza(event.target.value);
@@ -38,58 +44,79 @@ const PizzasContainer = ({ className }) => {
 	};
 
 	const addToCart = () => {
-		if (selectedPizza) {
-			const price = getPrice(selectedPizza);
-			if (price !== null) {
-				addProductToBasket(pizza.title, selectedPizza, price)
-					.then((response) => response.json())
-					.then((data) => setBasket(data));
+		const currentUserDataJSON = sessionStorage.getItem('userData');
+		if (!currentUserDataJSON) {
+			navigate('/login');
+		} else {
+			if (selectedPizza) {
+				const price = getPrice(selectedPizza);
+				if (price !== null) {
+					addProductToBasket(pizza.title, selectedPizza, price)
+						.then((response) => response.json())
+						.then((data) => setBasket(data));
+				}
 			}
 		}
 	};
 
+	const onPizzaRemove = (pizzaId) => {
+		requestServer('removePizza', pizzaId);
+	};
+
 	return (
 		<div className={className}>
-			<div className="overlay"></div>
-			<div className="box">
-				<Icon
-					imageUrl={
-						pizza && pizza.imgUrl
-							? require(`../../../${pizza.imgUrl.substring(4)}`)
-							: ''
-					}
-					width="300px"
-					height="300px"
-					radius="20px"
-					margin="10px 0 0 0"
-				></Icon>
-				<H2 margin="10px 0 0 0">{pizza ? pizza.title : 'Loading...'}</H2>
-				<div className="ingridients">Состав: {pizza.ingredients}</div>
-				<div className="button-module">
-					<Button
-						className="classic-size-button"
-						onClick={handlePizzaSizeChange}
-						value="32sm"
-						radius="5px"
-						border="none"
-					>
-						32см
-					</Button>
-					<Button
-						className="small-size-button"
-						onClick={handlePizzaSizeChange}
-						value="23sm"
-						radius="5px"
-						border="none"
-					>
-						23см
+			{isCreating ? (
+				<PizzaCreate pizza={pizza} />
+			) : (
+				<div className="box">
+					<Icon
+						imageUrl={
+							pizza && pizza.imgUrl
+								? require(`../../../${pizza.imgUrl.substring(4)}`)
+								: ''
+						}
+						width="300px"
+						height="300px"
+						radius="20px"
+						margin="10px 0 0 0"
+					/>
+					<Icon
+						className="delete-icon"
+						width="24px"
+						height="24px"
+						imageUrl={require('../../../assets/Logo/garbage.png')}
+						margin="10px 0 0 106px"
+						cursor="pointer"
+						onClick={() => onPizzaRemove(pizza.id)}
+					/>
+					<H2 margin="10px 0 0 0">{pizza ? pizza.title : 'Loading...'}</H2>
+					<div className="ingridients">Состав: {pizza.ingredients}</div>
+					<div className="button-module">
+						<Button
+							className="classic-size-button"
+							onClick={handlePizzaSizeChange}
+							value="32sm"
+							radius="5px"
+							border="none"
+						>
+							32см
+						</Button>
+						<Button
+							className="small-size-button"
+							onClick={handlePizzaSizeChange}
+							value="23sm"
+							radius="5px"
+							border="none"
+						>
+							23см
+						</Button>
+					</div>
+					<Button onClick={addToCart} radius="5px" border="none" height="60px">
+						<div>Добавить в корзину</div>
+						<div>{getPrice(selectedPizza)} руб.</div>
 					</Button>
 				</div>
-				<Button onClick={addToCart} radius="5px" border="none" height="60px">
-					<div>Добавить в корзину</div>
-					<div>{getPrice(selectedPizza)} руб.</div>
-				</Button>
-			</div>
+			)}
 		</div>
 	);
 };
@@ -135,5 +162,9 @@ export const Pizzas = styled(PizzasContainer)`
 		padding: 30px;
 		color: #430808;
 		font-weight: bold;
+	}
+
+	& .delete-icon {
+		position: absolute;
 	}
 `;

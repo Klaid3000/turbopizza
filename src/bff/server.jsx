@@ -7,6 +7,8 @@ import {
 	fetchUsers,
 	logout,
 	register,
+	savePizza,
+	removePizza,
 	updateUserRole,
 	removeUser,
 } from './operations';
@@ -20,6 +22,8 @@ export const server = {
 	register,
 	fetchUsers,
 	fetchRoles,
+	savePizza,
+	removePizza,
 	updateUserRole,
 	removeUser,
 };

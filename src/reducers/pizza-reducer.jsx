@@ -1,10 +1,11 @@
 import { ACTION_TYPE } from '../actions';
 
 const initialPizzaState = {
-	id: null,
-	title: null,
-	ingredients: null,
-	price: null,
+	id: '',
+	title: '',
+	imageUrl: '',
+	ingredients: '',
+	price: '',
 };
 
 export const pizzaReducer = (state = initialPizzaState, action) => {

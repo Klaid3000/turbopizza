@@ -4,3 +4,6 @@ export * from './logout.jsx';
 export * from './set-pizza.jsx';
 export * from './set-gift.jsx';
 export * from './set-drink.jsx';
+export * from './close-modal.jsx';
+export * from './open-modal.jsx';
+export * from './save-pizza-async.jsx';

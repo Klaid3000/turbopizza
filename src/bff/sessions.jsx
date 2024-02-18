@@ -1,4 +1,10 @@
-import { addSession, getSession, deleteSession } from './api';
+import {
+	addSession,
+	getSession,
+	deleteSession,
+	getBasket,
+	deleteProductFromBasket,
+} from './api';
 
 export const sessions = {
 	create(user) {
@@ -12,6 +18,10 @@ export const sessions = {
 		const session = await getSession(hash);
 		if (!session) {
 			return;
+		}
+		const basket = await getBasket();
+		for (const item of basket) {
+			await deleteProductFromBasket(item.id);
 		}
 		deleteSession(session.id);
 	},

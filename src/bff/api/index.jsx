@@ -16,3 +16,6 @@ export * from './delete-session';
 export * from './get-basket';
 export * from './add-to-basket';
 export * from './delete-from-basket';
+export * from './update-pizza';
+export * from './add-pizza';
+export * from './delete-pizza';

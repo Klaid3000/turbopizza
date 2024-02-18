@@ -8,3 +8,5 @@ export * from './remove-user';
 export * from './fetch-pizzas';
 export * from './fetch-drinks';
 export * from './fetch-gifts';
+export * from './save-pizza';
+export * from './remove-pizza';

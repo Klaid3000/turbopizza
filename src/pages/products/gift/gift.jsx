@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { getGift } from '../../../bff/api';
 import { setGift } from '../../../actions';
 import { Button, H2, Icon } from '../../../components';
@@ -15,6 +15,7 @@ const GiftsContainer = ({ className }) => {
 	const price = gift.price;
 	const dispatch = useDispatch();
 	const params = useParams();
+	const navigate = useNavigate();
 
 	useEffect(() => {
 		const fetchData = async () => {
@@ -27,11 +28,16 @@ const GiftsContainer = ({ className }) => {
 	}, [dispatch]);
 
 	const addToCart = () => {
-		const size = '';
-		if (gift && price !== null) {
-			addProductToBasket(gift.title, size, price)
-				.then((response) => response.json())
-				.then((data) => setBasket(data));
+		const currentUserDataJSON = sessionStorage.getItem('userData');
+		if (!currentUserDataJSON) {
+			navigate('/login');
+		} else {
+			const size = '';
+			if (gift && price !== null) {
+				addProductToBasket(gift.title, size, price)
+					.then((response) => response.json())
+					.then((data) => setBasket(data));
+			}
 		}
 	};
 

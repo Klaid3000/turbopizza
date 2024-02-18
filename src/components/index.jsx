@@ -7,3 +7,4 @@ export * from './input/input';
 export * from './auth-form-error/auth-form-error';
 export * from './title-for-icon/title-for-icon';
 export * from './content/content';
+export * from './modal/modal';
