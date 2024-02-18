@@ -1,25 +1,18 @@
 {
   "users": [
     {
-      "login": "klaid",
+      "login": "qwe",
       "password": "123456",
-      "registed_at": "2024-01-01 19:55",
+      "registed_at": "2024-02-11 11:29",
       "role_id": 0,
       "id": 2
     },
     {
-      "login": "qwe",
-      "password": "qweqwe123",
-      "registed_at": "2024-01-02 17:41",
-      "role_id": 1,
+      "login": "klaid",
+      "password": "123456",
+      "registed_at": "2024-02-11 11:31",
+      "role_id": 0,
       "id": 3
-    },
-    {
-      "login": "qwer",
-      "password": "qweqwe",
-      "registed_at": "2024-01-04 06:19",
-      "role_id": 1,
-      "id": 4
     }
   ],
   "roles": [
@@ -41,20 +34,10 @@
       "id": "001",
       "title": "Пицца Napoli",
       "image_url": "src/assets/Pizza/pizza-napoli.png",
-      "ingredients": "томатный соус, мацарелла, оливки, анчоусы, красный свежий лук, базилик",
+      "ingredients": "томатный соус, моцарелла, оливки, анчоусы, красный свежий лук, базилик",
       "price": {
         "32sm": 23,
         "23sm": 16
-      }
-    },
-    {
-      "id": "002",
-      "title": "Пицца Gorgo Pere",
-      "image_url": "src/assets/Pizza/pizza-gorgo-pere.png",
-      "ingredients": "медовое маскарпоне, груша нарезанная кусочками, моцарелла, сыр горгонзола",
-      "price": {
-        "32sm": 21,
-        "23sm": 15
       }
     },
     {
@@ -111,7 +94,7 @@
       "id": "008",
       "title": "Пицца Cotto",
       "image_url": "src/assets/Pizza/pizza-cotto.png",
-      "ingredients": "томатный соус, моцарелла, мацарелла fior di latte, ветчина",
+      "ingredients": "томатный соус, моцарелла, моцарелла fior di latte, ветчина",
       "price": {
         "32sm": 22,
         "23sm": 15
@@ -171,7 +154,7 @@
       "id": "014",
       "title": "Пицца Angeli Demoni",
       "image_url": "src/assets/Pizza/pizza-angeli-demoni.png",
-      "ingredients": "томатный соус, моцарелла, мацарелла fior di latte, пикантное салями Napoli, копченый сыр Scamorza, базилик, баклажан",
+      "ingredients": "томатный соус, моцарелла, моцарелла fior di latte, пикантное салями Napoli, копченый сыр Scamorza, базилик, баклажан",
       "price": {
         "32sm": 24,
         "23sm": 16
@@ -425,6 +408,40 @@
       "image_url": "src/assets/Ingredience/Testo/gift.png"
     }
   ],
-  "sessions": [],
+  "sessions": [
+    {
+      "hash": "0.40918570313290114626170179690234363079071044921875",
+      "user": {
+        "id": 3,
+        "login": "klaid",
+        "password": "123456",
+        "registeredAt": "2024-02-11 11:31",
+        "roleId": 0
+      },
+      "id": 1
+    },
+    {
+      "hash": "0.51883521614713212777303397160721942782402038574219",
+      "user": {
+        "id": 3,
+        "login": "klaid",
+        "password": "123456",
+        "registeredAt": "2024-02-11 11:31",
+        "roleId": 0
+      },
+      "id": 2
+    },
+    {
+      "hash": "0.13018317950775037949995294184191152453422546386719",
+      "user": {
+        "id": 3,
+        "login": "klaid",
+        "password": "123456",
+        "registeredAt": "2024-02-11 11:31",
+        "roleId": 0
+      },
+      "id": 3
+    }
+  ],
   "basket": []
 }
